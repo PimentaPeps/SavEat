@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_dark"
+    android:padding="5dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+
+    <TextView
+        android:id="@+id/item_produto_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light"
+        android:text="TextView" />
+</FrameLayout>
