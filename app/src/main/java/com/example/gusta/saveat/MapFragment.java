@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
+import com.example.gusta.saveat.model.Supermarket2;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -23,6 +24,10 @@ import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapFragment extends Fragment implements OnMapReadyCallback {
     private GoogleMap mMap;
+    Supermarket2 supermarket2;
+    public MapFragment(Supermarket2 supermarket2){
+        this.supermarket2 = supermarket2;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -55,9 +60,9 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+        LatLng posicao = new LatLng(supermarket2.getId(), supermarket2.getLongitude());
+        mMap.addMarker(new MarkerOptions().position(posicao).title("Marcador no mercado"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(posicao));
     }
 
 

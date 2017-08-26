@@ -1,10 +1,12 @@
 package com.example.gusta.saveat.model;
 
+import java.util.List;
+
 /**
  * Created by gusta on 25/08/2017.
  */
 
-public class Supermarket {
+public class Supermarket2 {
 
     private int id;
     private String adress;
@@ -12,6 +14,8 @@ public class Supermarket {
     private float longitude;
     private String name;
     private String placeId;
+    private List<Product> products;
+    private float totalPrice;
 
     public int getId() {
         return id;
@@ -59,5 +63,21 @@ public class Supermarket {
 
     public void setPlaceId(String placeId) {
         this.placeId = placeId;
+    }
+
+    public List<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(List<Product> products) {
+        this.products = products;
+    }
+
+    public float getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
     }
 }

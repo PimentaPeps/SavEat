@@ -40,6 +40,10 @@
         android:layout_height="wrap_content"
         android:layout_weight="10">
 
+        <ListView
+            android:id="@+id/produto_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
     </FrameLayout>
 
     <LinearLayout
@@ -57,7 +61,7 @@
             app:srcCompat="@mipmap/groceries" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/procura_mercado_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.gusta.saveat.model.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,9 +23,15 @@ public class ProductAdapter extends BaseAdapter {
     private List<Product> productList;
     private Context context;
 
-    public ProductAdapter(Context context, List<Product> productList){
+    public ProductAdapter(Context context, List<Product> productList) {
         this.context = context;
-        this.productList = productList;
+        if (productList != null)
+            this.productList = productList;
+        else this.productList = new ArrayList<Product>();
+    }
+
+    public List<Product> getList() {
+        return productList;
     }
 
     @Override
@@ -54,7 +61,7 @@ public class ProductAdapter extends BaseAdapter {
             itemView = (FrameLayout) convertView;
         }
 
-        ((TextView)itemView.findViewById(R.id.item_produto_text_view)).setText(productList.get(position).getName());
+        ((TextView) itemView.findViewById(R.id.item_produto_text_view)).setText(productList.get(position).getName());
 
         return itemView;
     }

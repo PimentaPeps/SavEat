@@ -1,0 +1,17 @@
+{
+  "address": "string",
+  "id": 1,
+  "latitude": -22.8279706,
+  "longitude": -47.0810116,
+  "name": "Pague Menos",
+  "placeId": "ChIJXTSm48jGyJQRTBxPtYqVGCs",
+  "products": [
+    {
+      "brand": "Coca Cola",
+      "id": 1,
+      "name": "Coca Cola 2l",
+      "price": 6.43
+    }
+  ],
+  "totalPrice": 6.43
+}

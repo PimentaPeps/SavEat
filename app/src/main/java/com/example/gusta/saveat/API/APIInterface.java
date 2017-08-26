@@ -1,6 +1,7 @@
 package com.example.gusta.saveat.API;
 
 import com.example.gusta.saveat.model.Product;
+import com.example.gusta.saveat.model.Supermarket;
 
 import java.util.Map;
 
@@ -27,4 +28,7 @@ public interface APIInterface {
 
     @PUT("products")
     Call<Product> updateProduct(@QueryMap Map<String, String> params);
+
+    @GET("products/list")
+    Call<Supermarket> getProductList(@QueryMap Map<String, String> params);
 }
